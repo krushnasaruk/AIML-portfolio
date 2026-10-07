@@ -52,6 +52,9 @@ const categories = [
 const types: ArchiveItem["type"][] = ["person", "event", "project", "workshop", "achievement", "club-moment", "research"];
 const typoStyles: ArchiveItem["typographyStyle"][] = ["display", "editorial", "technical", "mono", "minimal"];
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+const getImgUrl = (path: string) => `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+
 const coreLeaders: ArchiveItem[] = [
   {
     id: "abuzar",
@@ -59,7 +62,7 @@ const coreLeaders: ArchiveItem[] = [
     title: "ABUZAR",
     category: "PRESIDENT",
     year: "2024",
-    image: "/images/abuzar.jpeg",
+    image: getImgUrl("/images/abuzar.jpeg"),
     description: "President of the AIML Club. Leading the strategic vision and architectural direction of our AI initiatives and community growth.",
     theme: "warm",
     typographyStyle: "display",
@@ -73,7 +76,7 @@ const coreLeaders: ArchiveItem[] = [
     title: "ARSH",
     category: "TECHNICAL LEAD",
     year: "2024",
-    image: "/images/arsh.jpeg",
+    image: getImgUrl("/images/arsh.jpeg"),
     description: "Technical Lead driving machine learning model engineering and scalable algorithmic infrastructure across club projects.",
     theme: "cool",
     typographyStyle: "technical",
@@ -87,7 +90,7 @@ const coreLeaders: ArchiveItem[] = [
     title: "KRUSHNA",
     category: "VICE PRESIDENT",
     year: "2024",
-    image: "/images/krushna_1.jpeg",
+    image: getImgUrl("/images/krushna_1.jpeg"),
     description: "Vice President overseeing strategic operations and collaborative team synergy across our engineering divisions.",
     theme: "warm",
     typographyStyle: "editorial",
@@ -101,7 +104,7 @@ const coreLeaders: ArchiveItem[] = [
     title: "VAISHNAVI",
     category: "VICE PRESIDENT",
     year: "2024",
-    image: "/images/vaishnavi.jpeg",
+    image: getImgUrl("/images/vaishnavi.jpeg"),
     description: "Vice President championing community outreach, student engagement, and interdisciplinary hackathon initiatives.",
     theme: "warm",
     typographyStyle: "minimal",
@@ -115,7 +118,7 @@ const coreLeaders: ArchiveItem[] = [
     title: "YUGSHREE MAM",
     category: "CLUB ADVISOR",
     year: "2024",
-    image: "/images/yugshree_mam.jpeg",
+    image: getImgUrl("/images/yugshree_mam.jpeg"),
     description: "Faculty Advisor providing academic mentorship and bridging the gap between theoretical research and real-world deployment.",
     theme: "light",
     typographyStyle: "editorial",
@@ -129,7 +132,7 @@ const coreLeaders: ArchiveItem[] = [
     title: "VEDIKA",
     category: "TECHNICAL LEAD",
     year: "2024",
-    image: "/images/vedika.jpeg",
+    image: getImgUrl("/images/vedika.jpeg"),
     description: "Technical Lead focusing on neural network architectures, computer vision pipelines, and student technical workshops.",
     theme: "cool",
     typographyStyle: "technical",
@@ -147,7 +150,7 @@ const generatedItems: ArchiveItem[] = Array.from({ length: 24 }).map((_, i) => {
     title: titles[i],
     category: categories[i % categories.length],
     year: (2023 + (i % 4)).toString(),
-    image: `/images/item-${i + 1}.jpg`,
+    image: getImgUrl(`/images/item-${i + 1}.jpg`),
     description: `Exploring the frontiers of ${categories[i % categories.length].toLowerCase()} in our student-led AI/ML community.`,
     theme: palette.theme,
     typographyStyle: typoStyles[i % typoStyles.length],
