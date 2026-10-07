@@ -1,0 +1,81 @@
+/* TYPOGRAPHY SYSTEM */
+
+.typo-architectural {
+  font-family: 'Big Shoulders Display', 'Anton', 'Oswald', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.85;
+}
+
+.typo-display {
+  font-family: 'Big Shoulders Display', 'Anton', 'Oswald', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 0.85;
+}
+
+.typo-technical {
+  font-family: 'Big Shoulders Display', 'Anton', 'Inter Tight', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 0.88;
+}
+
+.typo-editorial {
+  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.typo-mono {
+  font-family: 'Space Mono', 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.typo-minimal {
+  font-family: 'Big Shoulders Display', 'Inter', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 0.9;
+}
+
+/* Detail View Title Overrides */
+.detail-title {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 2rem;
+  mix-blend-mode: normal;
+}
+
+.detail-title.typo-technical { font-size: 8vw; }
+.detail-title.typo-editorial { font-size: 7vw; }
+.detail-title.typo-display { font-size: 10vw; margin-bottom: 1rem; }
+.detail-title.typo-mono { font-size: 5vw; }
+.detail-title.typo-minimal { font-size: 6vw; letter-spacing: 0.1em; }
+
+/* Detail Meta */
+.detail-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+/* Detail Description */
+.detail-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 480px;
+}
